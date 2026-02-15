@@ -1,0 +1,106 @@
+@import "colors.css";
+
+* {
+    font-family: JetBrainsMono Nerd Font Propo;
+    font-size: 19px;
+    min-height: 10px;
+}
+
+window#waybar {
+    background: @background;
+    color: @on_background;
+}
+
+/* all modules except launcher get border */
+#window, #clock, #custom-swaync, #tray, #mpd, #network, #cpu, #memory, #pulseaudio {
+    margin: 5px 4px 5px 4px;
+    padding: 2px 0px;
+    /*
+	  border-radius: 4px;
+	  border: 2px solid @primary;
+	  */
+}
+
+#network {
+    min-width: 10px;
+    margin-left: 5px;
+    margin-right: -5px;
+}
+
+#battery {
+    min-width: 10px;
+    margin-right: 8px;
+    margin-left: 11px
+}
+
+#pulseaudio {
+    min-width: 10px;
+    margin-right: 10px; 
+} 
+
+
+#cpu {
+    min-width: 10px;
+    margin-right: 11px;
+}
+#memory {
+    min-width: 10px;
+    margin-right: 11px; 
+}
+
+#custom-poloska {
+  opacity: .1;
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px 4px;
+}
+
+
+tooltip {
+    background-color: @background;
+    border: 1px solid @background;
+    border-radius: 0px;
+}
+
+#custom-power {
+    color: @on_background;
+    margin-left: 12px;
+}
+
+#workspaces button {
+    color: @outline;
+    padding: 0px 2px;
+}
+
+#workspaces button:hover {
+    color: @primary;
+}
+
+#workspaces button.active {
+    color: @on_surface;
+}
+
+#workspaces button.empty {
+    color: @surface_bright;
+}
+
+#mpd { 
+    color: @tertiary;
+}
+
+#idle_inhibitor.activated {
+    color: @on_background;
+}
+#battery.charging {
+    color: @on_background;
+}
+#network.disconnected {
+    color: @on_background;
+}
+#network.disabled {
+    color: @on_background;
+}
+#pulseaudio.muted {
+    color: @on_background;
+}
+

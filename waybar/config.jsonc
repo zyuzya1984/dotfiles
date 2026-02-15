@@ -1,0 +1,120 @@
+{
+  "layer": "top",
+  "position": "top",
+  "spacing": 0,
+  "fixed-center": true,
+  "reload_style_on_change": true,
+
+  "modules-left": [
+    "custom/poloska",
+    "niri/workspaces",
+    "custom/poloska",
+    "mpd"
+  ],
+
+  "modules-center": [
+          "clock"
+  ],
+
+  "modules-right": [
+    "tray",
+    "custom/poloska",
+    "niri/language",
+    "custom/poloska",
+    "pulseaudio",
+    "custom/poloska",
+    "network",
+    "battery",
+    "custom/poloska",
+  ],
+
+  "custom/poloska": {
+    "format": "|",
+    "tooltip": false
+  },
+  
+  "niri/language": {
+  "format": "{}",
+  "format-en": "en",
+  "format-ru": "ru",
+  "format-uk": "ua"
+  },
+
+  "tray": {
+    "icon-size": 20,
+    "spacing": 13
+  },
+
+  "niri/window": {
+    "format": "{}"
+  },
+
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-muted": "󰸈 0%",
+    "format-source": " {volume}%",
+    "format-source-muted": " ",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "on-click": "foot --app-id audio -w 560x250 -e ~/.config/scripts/changeaudio.sh",
+    "tooltip-format": "{volume}%",
+    "tooltip": false
+  },
+
+  "clock": {
+    "timezone": "Europe/Kiev",
+    "format": "{:%a, %b %d %H:%M}",
+    "tooltip": "false"
+  },
+
+  "battery": {
+    "states": {
+      "warning": 15,
+      "critical": 8
+    },
+    "format": "{icon}",
+    "format-charging": " {icon}",
+    "format-plugged": " {icon}",
+    "format-icons": [
+      "󰂎", "󰁺", "󰁻", "󰁼", "󰁽",
+      "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+    ],
+    "interval": 3,
+    "format-time": "{H}h {M}m",
+    "tooltip-format": "{capacity}% {power}w {time}",
+    "tooltip-format-charging": "{capacity}% (charging) {time}",
+    "on-click": "foot --app-id powermenu -w 560x240 -e ~/.config/scripts/power-profiles.sh"
+  },
+
+  "network": {
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": " ",
+    "tooltip-format": " ",
+    "format-linked": " ",
+    "format-disconnected": "󰤮 ",
+    "tooltip": false,
+    "max-length": 20,
+    "on-click": "foot sh -c nmtui",
+    "format-icons": [
+      "󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "
+    ]
+  },
+
+  "mpd": {
+    "format": "{stateIcon} {artist} - {title}",
+    "format-disconnected": "",
+    "format-stopped": "",
+    "max-length": 30,
+    "interval": 10,
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "tooltip-format": "time: {elapsedTime:%M:%S}/{totalTime:%M:%S}",
+    "tooltip-format-disconnected": ""
+  }
+}
+
