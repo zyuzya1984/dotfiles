@@ -58,7 +58,7 @@
     "format-icons": {
       "default": ["", "", ""]
     },
-    "on-click": "foot --app-id audio -w 560x250 -e ~/.config/scripts/changeaudio.sh",
+    "on-click": "kitty --class audio -e /home/user/.config/scripts/changeaudio.sh",
     "tooltip-format": "{volume}%",
     "tooltip": false
   },
@@ -85,7 +85,7 @@
     "format-time": "{H}h {M}m",
     "tooltip-format": "{capacity}% {power}w {time}",
     "tooltip-format-charging": "{capacity}% (charging) {time}",
-    "on-click": "foot --app-id powermenu -w 560x240 -e ~/.config/scripts/power-profiles.sh"
+    "on-click": "kitty --class powermenu -e /home/user/.config/scripts/power-profiles.sh",
   },
 
   "network": {

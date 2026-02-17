@@ -10,7 +10,7 @@ menu() {
     --layout=reverse \
     --border=double \
     --preview="chafa --size 44x34 {}" \
-    --preview-window="top:65%"
+    --preview-window="top:60%"
 }
 
 SELECTED_WALL=$(ls *.jpg *.png *.jpeg *.gif 2>/dev/null | menu)
@@ -18,4 +18,7 @@ SELECTED_WALL=$(ls *.jpg *.png *.jpeg *.gif 2>/dev/null | menu)
 
 SELECTED_PATH="$WALLPAPER_DIR/$SELECTED_WALL"
 
+clear
+sleep 0.1
 swww img "$SELECTED_PATH" --transition-duration 1 --transition-fps 60 --transition-type fade
+matugen image "$SELECTED_PATH"

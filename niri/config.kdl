@@ -5,9 +5,9 @@ spawn-at-startup "udiskie"
 spawn-at-startup "xwayland-satellite"
 
 binds {
-    Mod+Space { spawn "foot"; }
-    Mod+E { spawn "foot" "sh" "-c" "yazi"; }
-    Mod+W { spawn "foot" "--app-id" "wallpaper-selector" "-w" "580x630" "-e" "/home/user/.config/scripts/wpchange.sh"; } 
+    Mod+Space { spawn "kitty"; }
+    Mod+E { spawn "kitty" "-e" "yazi"; }
+    Mod+W { spawn "kitty" "--class" "wallpaper-selector" "-e" "/home/user/.config/scripts/wpchange.sh"; }
     Mod+Shift+D { spawn "fuzzel"; }
     XF86MonBrightnessUp 	{ spawn "brightnessctl" "-q" "set" "2%+"; }
     XF86MonBrightnessDown 	{ spawn "brightnessctl" "-q" "set" "2%-"; }
@@ -143,17 +143,20 @@ animations {
 window-rule {
     match app-id="wallpaper-selector"
     open-floating true
-    default-column-width {}
+    default-column-width { fixed 580; }
+    default-window-height { fixed 600; } 
 }
 window-rule {
     match app-id="audio"
+    default-column-width { fixed 560; }
+    default-window-height { fixed 240; } 
     open-floating true
-    default-column-width {}
 }
 window-rule {
     match app-id="powermenu"
+    default-column-width { fixed 560; }
+    default-window-height { fixed 240; } 
     open-floating true
-    default-column-width {}
 }
 
 window-rule {
