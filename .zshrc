@@ -1,7 +1,7 @@
 # env variables
 export EDITOR="nvim"
-export TERM="foot"
-export TERMINAL="foot"
+export TERM="kitty"
+export TERMINAL="kitty"
 export BROWSER="firefox"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -9,6 +9,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 alias cd="z" # cd with zoxide
 alias nv="nvim" # editor
+alias ls="eza -a --icons=always --git"
 
 setopt append_history inc_append_history share_history 
 setopt auto_menu menu_complete 
